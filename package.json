@@ -1,0 +1,39 @@
+{
+  "name": "golfin-dev-metadata-apis",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "git@github.com:wonderwall-tim/golfin-dev-metadata-apis.git",
+  "author": "wonderwall-tim <timothy.chow@wonderwall-g.gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec tsx './src/index.ts'",
+    "build": "babel src --out-dir dist",
+    "serve": "babel-node dist/index.ts"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
+    "tsx": "^4.19.1"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.7",
+    "bn.js": "^5.2.1",
+    "cookie-parser": "^1.4.7",
+    "cross-fetch": "^3.0.4",
+    "express": "^4.17.1",
+    "express-reload": "^1.2.0",
+    "express-validator": "^6.6.1",
+    "golfin-dev-metadata": "https://github.com/wonderwall-tim/golfin-dev-metadata.git#v1.1.2",
+    "ts-node": "^10.9.2",
+    "web3": "^4.14.0",
+    "web3-utils": "^4.3.2"
+  },
+  "type": "module"
+}

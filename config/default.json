@@ -1,0 +1,14 @@
+{
+  "chainId": "11155111",
+  "api": {
+    "access_control": [
+      "http://www.golfio.dev",
+      {
+        "regex": "http[s]?://.*-stg.golfin.dev"
+      },
+      {
+        "regex": "http[s]?://localhost:[0-9]{4}"
+      }
+    ]
+  }
+}
