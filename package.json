@@ -6,7 +6,7 @@
   "author": "wonderwall-tim <timothy.chow@wonderwall-g.gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec tsx './src/index.ts'",
+    "start": "nodemon --exec tsx './api/index.ts'",
     "build": "babel src --out-dir dist",
     "serve": "babel-node dist/index.ts"
   },
