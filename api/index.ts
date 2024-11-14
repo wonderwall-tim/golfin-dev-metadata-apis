@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static("public"))
 
+// FIXME: cors
 /* 
 const corsOptions = {
     origin: ['http://localhost:3000', 'https://smart-contract-iota.vercel.app/'],
