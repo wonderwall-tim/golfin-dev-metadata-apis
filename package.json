@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --exec tsx './api/index.ts'",
-    "build": "babel src --out-dir dist",
+    "build": "babel api --out-dir dist",
     "serve": "babel-node dist/index.ts"
   },
   "devDependencies": {
