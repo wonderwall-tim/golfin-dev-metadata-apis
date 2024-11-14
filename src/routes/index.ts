@@ -10,6 +10,6 @@ router.get("/ping", function (req, res, next) {
 });
 
 //Return the metadata json
-router.use("/api", getMetadata);
+router.use("/", getMetadata);
 
 export default router;

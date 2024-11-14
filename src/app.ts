@@ -2,20 +2,23 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import indexRouter from './routes/index';
+import { errorHandler } from './errorHandler';
+import "express-async-errors"
 
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static('public'))
 
-app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://smart-contract-iota.vercel.app/']
+}))
 
-app.use('/', indexRouter)
+app.use(express.static("public"))
 
-app.use((req, res, next) => {
-    next(new Error(`cannot handle ${req.path}`));
-})
+app.use('/api', indexRouter)
+
+app.use(errorHandler)
 
 export default app;

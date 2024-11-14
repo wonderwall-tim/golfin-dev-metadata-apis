@@ -2,18 +2,34 @@ import express from "express";
 /* import { InvalidCoreMetadata } from "../errors"; */
 import Token from 'golfin-dev-metadata/build/Token'
 import Metadata from 'golfin-dev-metadata/build/Metadata'
-import TOKEN_TYPE_LAYOUT from 'golfin-dev-metadata/build/Layout'
+import TOKEN_TYPE_LAYOUT, { CAR_LAYOUT } from 'golfin-dev-metadata/build/Layout'
 import BN from 'bn.js'
-import web3 from 'web3'
 
 const getMetadata = express.Router();
 
-/* const layoutsByTypeId = {
-    "1": CAR_LAYOUT,
-}
- */
+getMetadata.post("/encode", async (req, res, next) => {
+    try {
+        console.log('on post');
 
-getMetadata.get("/:tokenId", async (req, res, next) => {
+
+        const coreData = req.body
+        console.log(coreData);
+
+        const token = Token.fromMetadata(coreData, CAR_LAYOUT);
+        const metadata = new Metadata(token).toJSON();
+        res.json({
+            metadata: metadata,
+            token: token.getTokenID().toString(10)
+        })
+
+    } catch (e) {
+        const errorMsg = (e as any).message
+        console.log(errorMsg)
+        return next(errorMsg)
+    }
+});
+
+getMetadata.get("/decode/:tokenId", async (req, res, next) => {
     const tokenIdInput = req.params.tokenId
     try {
         const bnToken = new BN(tokenIdInput)
@@ -31,5 +47,7 @@ getMetadata.get("/:tokenId", async (req, res, next) => {
         }
     }
 });
+
+
 
 export { getMetadata };

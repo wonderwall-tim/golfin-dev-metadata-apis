@@ -14,9 +14,9 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
     "@babel/node": "^7.8.7",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
     "@babel/register": "^7.8.6",
+    "@types/cookie-parser": "^1.4.7",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6",
     "tsx": "^4.19.1"
@@ -28,12 +28,12 @@
     "cookie-parser": "^1.4.7",
     "cross-fetch": "^3.0.4",
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "express-reload": "^1.2.0",
     "express-validator": "^6.6.1",
-    "golfin-dev-metadata": "https://github.com/wonderwall-tim/golfin-dev-metadata.git#v1.1.2",
+    "golfin-dev-metadata": "git+https://wonderwall-tim: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@github.com/wonderwall-tim/golfin-dev-metadata.git#v1.1.3",
     "ts-node": "^10.9.2",
     "web3": "^4.14.0",
     "web3-utils": "^4.3.2"
-  },
-  "type": "module"
+  }
 }
