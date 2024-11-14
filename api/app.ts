@@ -17,7 +17,7 @@ app.use(cors({
 
 app.use(express.static("public"))
 
-app.use('/api', indexRouter)
+app.use('/', indexRouter)
 
 app.use(errorHandler)
 
