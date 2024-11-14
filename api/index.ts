@@ -22,9 +22,13 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static("public"))
 
-app.use(cors({
-    origin: ['http://localhost:3000', 'https://smart-contract-iota.vercel.app/']
-}))
+/* 
+const corsOptions = {
+    origin: ['http://localhost:3000', 'https://smart-contract-iota.vercel.app/'],
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions)); */
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
