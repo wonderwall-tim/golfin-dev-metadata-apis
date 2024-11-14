@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import cors from 'cors';
+/* import cors from 'cors'; */
 import { errorHandler } from './errorHandler';
 import { chainId } from './config/default.json'
 import "express-async-errors"
