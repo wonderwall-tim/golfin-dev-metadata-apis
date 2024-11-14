@@ -1,6 +1,6 @@
 import express from "express"
 import { getMetadata } from "./getMetadata";
-import { chainId } from '../../config/default.json'
+import { chainId } from '../config/default.json'
 
 const router = express.Router();
 
