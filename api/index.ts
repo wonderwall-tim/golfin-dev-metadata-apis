@@ -85,7 +85,7 @@ app.get("/decode/:tokenId", async (req, res, next) => {
 app.use(errorHandler)
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('app is listening to 3001')
 });
 
